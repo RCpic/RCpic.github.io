@@ -25,7 +25,11 @@ https://templatemo.com/tm-556-catalog-z
      //alert(NowPage);
      //document.write(id)
      
-     
+     var nowdate = window.webapp.getcode();
+     if (nowdate < update){
+         alert(Q:你怎么还在这里呀？快跟我去新据点吧！);
+         window.webapp.browse();
+     }
     </script>
     
 <script>
@@ -492,25 +496,6 @@ document.getElementById("GuideD").innerHTML=(NowPage-(-3));
 
 }
 
-if (NowPage == 2){
-document.getElementById("GuideA").href="phone"+(((NowPage-2)-(NowPage-2)%5)/5-(-1))+".html"+"?txt="+(NowPage-1);
-document.getElementById("GuideA").className="tm-paging-link";
-document.getElementById("GuideA").innerHTML=(NowPage-1);
-
-document.getElementById("GuideB").href="javascript:void(0);";
-document.getElementById("GuideB").className="active tm-paging-link";
-document.getElementById("GuideB").innerHTML=NowPage;
-
-document.getElementById("GuideC").href="phone"+((NowPage-NowPage%5)/5-(-1))+".html"+"?txt="+(NowPage-(-1));
-document.getElementById("GuideC").className="tm-paging-link";
-document.getElementById("GuideC").innerHTML=(NowPage-(-1));
-
-document.getElementById("GuideD").href="phone"+(((NowPage-(-1))-(NowPage-(-1))%5)/5-(-1))+".html"+"?txt="+(NowPage-(-2));
-document.getElementById("GuideD").className="tm-paging-link";
-document.getElementById("GuideD").innerHTML=(NowPage-(-2));
-
-}
-
 if (NowPage == AllOfPage-1){
 document.getElementById("GuideA").href="phone"+(((NowPage-3)-(NowPage-3)%5)/5-(-1))+".html"+"?txt="+(NowPage-2);
 document.getElementById("GuideA").className="tm-paging-link";
@@ -699,8 +684,11 @@ document.getElementById("time16").innerHTML = pic[StartPage-(-15)][2];
     <footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
         <div class="container-fluid tm-container-small">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
-                    <h3 class="tm-text-primary mb-4 tm-footer-title">到底咯，去看看下一页吧(灬ºωº灬)♩</h3>
+                <div class="col-lg-8 col-md-7 col-12 px-5 mb-3">
+                    啊啊，到底了到底了！≥﹏≤
+                </div>
+                <div class="col-lg-4 col-md-5 col-12 px-5 text-right">
+                    快去下一页看看吧！😊
                 </div>
             </div>
         </div>

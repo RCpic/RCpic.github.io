@@ -442,7 +442,6 @@ https://templatemo.com/tm-556-catalog-z
                     <a id="GuideB" ></a>
                     <a id="GuideC" ></a>
                     <a id="GuideD" ></a>
-                    <a id="GuideE" ></a>
                 </div>
                 <a id="GuideNEXT"></a>
             </div>
@@ -459,26 +458,23 @@ document.getElementById("GuideNEXT").href="RC"+((NowPage-NowPage%5)/5-(-1))+".ht
 document.getElementById("GuideNEXT").className="btn btn-primary tm-btn-next";
 document.getElementById("GuideNEXT").innerHTML="Next";
 
+ 
 
-document.getElementById("GuideA").href="RC"+(((NowPage-3)-(NowPage-3)%5)/5-(-1))+".html"+"?txt="+(NowPage-2);
+document.getElementById("GuideA").href="RC"+(((NowPage-2)-(NowPage-2)%5)/5-(-1))+".html"+"?txt="+(NowPage-1);
 document.getElementById("GuideA").className="tm-paging-link";
-document.getElementById("GuideA").innerHTML=(NowPage-2);
+document.getElementById("GuideA").innerHTML=(NowPage-1);
 
-document.getElementById("GuideB").href="RC"+(((NowPage-2)-(NowPage-2)%5)/5-(-1))+".html"+"?txt="+(NowPage-1);
-document.getElementById("GuideB").className="tm-paging-link";
-document.getElementById("GuideB").innerHTML=(NowPage-1);
+document.getElementById("GuideB").href="RC"+(((NowPage-1)-(NowPage-1)%5)/5-(-1))+".html"+"?txt="+NowPage;
+document.getElementById("GuideB").className="active tm-paging-link";
+document.getElementById("GuideB").innerHTML=NowPage;
 
-document.getElementById("GuideC").href="RC"+(((NowPage-1)-(NowPage-1)%5)/5-(-1))+".html"+"?txt="+NowPage;
-document.getElementById("GuideC").className="active tm-paging-link";
-document.getElementById("GuideC").innerHTML=NowPage;
+document.getElementById("GuideC").href="RC"+((NowPage-NowPage%5)/5-(-1))+".html"+"?txt="+(NowPage-(-1));
+document.getElementById("GuideC").className="tm-paging-link";
+document.getElementById("GuideC").innerHTML=(NowPage-(-1));
 
-document.getElementById("GuideD").href="RC"+((NowPage-NowPage%5)/5-(-1))+".html"+"?txt="+(NowPage-(-1));
+document.getElementById("GuideD").href="RC"+(((NowPage-(-1))-(NowPage-(-1))%5)/5-(-1))+".html"+"?txt="+(NowPage-(-2));
 document.getElementById("GuideD").className="tm-paging-link";
-document.getElementById("GuideD").innerHTML=(NowPage-(-1));
-
-document.getElementById("GuideE").href="RC"+(((NowPage-(-1))-(NowPage-(-1))%5)/5-(-1))+".html"+"?txt="+(NowPage-(-2));
-document.getElementById("GuideE").className="tm-paging-link";
-document.getElementById("GuideE").innerHTML=(NowPage-(-2));
+document.getElementById("GuideD").innerHTML=(NowPage-(-2));
 
 if (NowPage == 1){
 document.getElementById("GuideA").href="javascript:void(0);";
@@ -497,34 +493,27 @@ document.getElementById("GuideD").href="RC"+(((NowPage-(-2))-(NowPage-(-2))%5)/5
 document.getElementById("GuideD").className="tm-paging-link";
 document.getElementById("GuideD").innerHTML=(NowPage-(-3));
 
-document.getElementById("GuideE").href="RC"+(((NowPage-(-3))-(NowPage-(-3))%5)/5-(-1))+".html"+"?txt="+(NowPage-(-4));
-document.getElementById("GuideE").className="tm-paging-link";
-document.getElementById("GuideE").innerHTML=(NowPage-(-4));
-}
-
-if (NowPage == 2){
-document.getElementById("GuideA").href="RC"+(((NowPage-2)-(NowPage-2)%5)/5-(-1))+".html"+"?txt="+(NowPage-1);
-document.getElementById("GuideA").className="tm-paging-link";
-document.getElementById("GuideA").innerHTML=(NowPage-1);
-
-document.getElementById("GuideB").href="javascript:void(0);";
-document.getElementById("GuideB").className="active tm-paging-link";
-document.getElementById("GuideB").innerHTML=NowPage;
-
-document.getElementById("GuideC").href="RC"+((NowPage-NowPage%5)/5-(-1))+".html"+"?txt="+(NowPage-(-1));
-document.getElementById("GuideC").className="tm-paging-link";
-document.getElementById("GuideC").innerHTML=(NowPage-(-1));
-
-document.getElementById("GuideD").href="RC"+(((NowPage-(-1))-(NowPage-(-1))%5)/5-(-1))+".html"+"?txt="+(NowPage-(-2));
-document.getElementById("GuideD").className="tm-paging-link";
-document.getElementById("GuideD").innerHTML=(NowPage-(-2));
-
-document.getElementById("GuideE").href="RC"+(((NowPage-(-2))-(NowPage-(-2))%5)/5-(-1))+".html"+"?txt="+(NowPage-(-3));
-document.getElementById("GuideE").className="tm-paging-link";
-document.getElementById("GuideE").innerHTML=(NowPage-(-3));
 }
 
 if (NowPage == AllOfPage-1){
+document.getElementById("GuideA").href="RC"+(((NowPage-3)-(NowPage-3)%5)/5-(-1))+".html"+"?txt="+(NowPage-2);
+document.getElementById("GuideA").className="tm-paging-link";
+document.getElementById("GuideA").innerHTML=(NowPage-2);
+
+document.getElementById("GuideB").href="RC"+(((NowPage-2)-(NowPage-2)%5)/5-(-1))+".html"+"?txt="+(NowPage-1);
+document.getElementById("GuideB").className="tm-paging-link";
+document.getElementById("GuideB").innerHTML=(NowPage-1);
+
+document.getElementById("GuideC").href="javascript:void(0);";
+document.getElementById("GuideC").className="active tm-paging-link";
+document.getElementById("GuideC").innerHTML=NowPage;
+
+document.getElementById("GuideD").href="RC"+((NowPage-NowPage%5)/5-(-1))+".html"+"?txt="+(NowPage-(-1));
+document.getElementById("GuideD").className="tm-paging-link";
+document.getElementById("GuideD").innerHTML=(NowPage-(-1));
+}
+
+if (NowPage == AllOfPage){
 document.getElementById("GuideA").href="RC"+(((NowPage-4)-(NowPage-4)%5)/5-(-1))+".html"+"?txt="+(NowPage-3);
 document.getElementById("GuideA").className="tm-paging-link";
 document.getElementById("GuideA").innerHTML=(NowPage-3);
@@ -540,32 +529,6 @@ document.getElementById("GuideC").innerHTML=(NowPage-1);
 document.getElementById("GuideD").href="javascript:void(0);";
 document.getElementById("GuideD").className="active tm-paging-link";
 document.getElementById("GuideD").innerHTML=NowPage;
-
-document.getElementById("GuideE").href="RC"+((NowPage-NowPage%5)/5-(-1))+".html"+"?txt="+(NowPage-(-1));
-document.getElementById("GuideE").className="tm-paging-link";
-document.getElementById("GuideE").innerHTML=(NowPage-(-1));
-}
-
-if (NowPage == AllOfPage){
-document.getElementById("GuideA").href="RC"+(((NowPage-5)-(NowPage-5)%5)/5-(-1))+".html"+"?txt="+(NowPage-4);
-document.getElementById("GuideA").className="tm-paging-link";
-document.getElementById("GuideA").innerHTML=(NowPage-4);
-
-document.getElementById("GuideB").href="RC"+(((NowPage-4)-(NowPage-4)%5)/5-(-1))+".html"+"?txt="+(NowPage-3);
-document.getElementById("GuideB").className="tm-paging-link";
-document.getElementById("GuideB").innerHTML=(NowPage-3);
-
-document.getElementById("GuideC").href="RC"+(((NowPage-3)-(NowPage-3)%5)/5-(-1))+".html"+"?txt="+(NowPage-2);
-document.getElementById("GuideC").className="tm-paging-link";
-document.getElementById("GuideC").innerHTML=(NowPage-2);
-
-document.getElementById("GuideD").href="RC"+(((NowPage-2)-(NowPage-2)%5)/5-(-1))+".html"+"?txt="+(NowPage-1);
-document.getElementById("GuideD").className="tm-paging-link";
-document.getElementById("GuideD").innerHTML=(NowPage-1);
-
-document.getElementById("GuideE").href="javascript:void(0);";
-document.getElementById("GuideE").className="active tm-paging-link";
-document.getElementById("GuideE").innerHTML=NowPage;
 }
 
 
