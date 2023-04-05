@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Masonry Responsive Template</title>
+        <title>RC.picture</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -19,11 +19,7 @@
         Masonry Template 
         http://www.templatemo.com/preview/templatemo_434_masonry
         -->
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+
 
 <script>
      var loc = location.href;
@@ -198,11 +194,11 @@ var Nb2 = [
 
 var Nb1 = [
     "https://www.helloimg.com/images/2023/04/05/oX48uX.png",
-    "网页文字样式",
+    "未更新",
+    "未更新",
+    "未更新",
     "御家かえる",
     "这家伙最近画起漫画来了，图都不带更新了。(有空可以翻一下他的漫画来给大家看看)",
-    "文字颜色",
-    "预留更新",
     "https://www.helloimg.com/images/2023/04/05/oXtf4o.jpg",
     "https://www.helloimg.com/images/2023/04/05/oXthwD.jpg",
     "https://www.helloimg.com/images/2023/04/05/oXtjhS.jpg",
@@ -222,10 +218,29 @@ var XPAGE = [Nb1,Nb2,Nb3,Nb4,Nb5,Nb6,Nb7,Nb8,Nb9,Nb10,Nb11,Nb12,Nb13,Nb14,Nb15,N
 
 var LEN0 = XPAGE[GetPage].length;
 var LEN = LEN0-6;
+
+
+var BG = XPAGE[GetPage][0];
 </script>
 
+<style>
+.content-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background-image: url(" + BG + ");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+</style>
 
-
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
         <div id="loader-wrapper">
             <div id="loader"></div>
         </div>
@@ -256,16 +271,6 @@ var LEN = LEN0-6;
                             <h2 id="H2"></h2>
                             <p id="P2"></p>
                         </div>
-                    </div>
-                    <div class="row">
-                        <form action="#" method="post" class="subscribe-form">
-                            <fieldset class="col-md-offset-4 col-md-3 col-sm-8">
-                                <input type="email" id="subscribe-email" placeholder="Enter your email...">
-                            </fieldset>
-                            <fieldset class="col-md-5 col-sm-4">
-                                <input type="submit" id="subscribe-submit" class="button white" value="Subscribe!">
-                            </fieldset>
-                        </form>
                     </div>
                 </div>
             </div> <!-- .site-banner -->
@@ -891,8 +896,8 @@ var LEN = LEN0-6;
 
 
 //document.getElementById("download").innerHTML = "Download";//灰页文字
-document.getElementById("H2").innerHTML = XPAGE[GetPage][3]
-document.getElementById("P2").innerHTML = XPAGE[GetPage][4]
+document.getElementById("H2").innerHTML = XPAGE[GetPage][4]
+document.getElementById("P2").innerHTML = XPAGE[GetPage][5]
 
 document.getElementById("imgS1").src = XPAGE[GetPage][6]; document.getElementById("hrefS1").href = XPAGE[GetPage][6];
 document.getElementById("hrefT1").href = XPAGE[GetPage][6];
