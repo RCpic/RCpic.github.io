@@ -210,17 +210,6 @@ h5 {
     color: #fff;
 }
 
-.content-bg {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
-    background-image: url(../images/bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 .bg-overlay {
     background: rgba(0,0,0,0.3);
     position: fixed;
