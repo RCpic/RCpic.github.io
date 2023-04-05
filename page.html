@@ -1,0 +1,122 @@
+<html>
+<head>
+  <style>
+@keyframes fade-in {
+  from {
+    opacity: 0; /* 设置初始透明度为 0 */
+  }
+  to {
+    opacity: 1; /* 设置最终透明度为 1 */
+  }
+}
+
+    /* 使用 CSS 来设置背景图片和标题样式 */
+    body {
+      background-image: url("background.jpg"); /* 背景图片的路径 */
+      background-size: cover; /* 背景图片全屏显示 */
+    }
+    h1 {
+      color: white; /* 标题颜色为白色 */
+      margin-left: 20px; /* 标题左边距为 20 像素 */
+      font-size: 36px; /* 标题字号为 36 像素 */
+      animation-name: fade-in; /* 设置动画名称为 fade-in */
+      animation-duration: 3s; /* 设置动画持续时间为 3 秒 */
+    }
+    p {
+      color: white; /* 小字颜色为白色 */
+      margin-left: 20px; /* 小字左边距为 20 像素 */
+      font-size: 14px; /* 小字字号为 18 像素 */
+      animation-name: fade-in; /* 设置动画名称为 fade-in */
+      animation-duration: 4s; /* 设置动画持续时间为 3 秒 */
+    }
+    footer {
+      color: white; /* 版权信息颜色为白色 */
+      margin-left: 20px; /* 版权信息左边距为 20 像素 */
+      font-size: 10px; /* 版权信息字号为 12 像素 */
+      position: fixed; /* 设置版权信息的定位为固定 */
+      bottom: 0; /* 设置版权信息距离底部为 0 */
+    }
+    button {
+      position: absolute; /* 绝对定位按钮 */
+      bottom: 20px; /* 距离底部 20 像素 */
+      right: 20px; /* 距离右边 20 像素 */
+      width: calc(100% / 6); /* 宽度为屏幕宽度的六分之一 */
+      height: 40px; /* 高度为 40 像素 */
+      border: 2px solid white; /* 边框为白色，宽度为 2 像素 */
+      background-color: transparent; /* 背景颜色为透明 */
+      color: white; /* 文本颜色为白色 */
+      font-size: 18px; /* 文本字号为 18 像素 */
+      border-radius: 10px; /* 设置边框的圆角半径为 10 像素 */
+    }
+  </style>
+</head>
+<body>
+  <h1>RCpic.github.io</h1> <!-- 标题文本 -->
+  <p>(ง °Θ°)ว  Let's go</p> <!-- 小字文本 -->
+  <button id="btn">6秒进入</button> <!-- 按钮 -->
+<footer id="text"></footer>
+  <script>
+    // 获取按钮元素
+    var btn = document.getElementById("btn");
+    
+    // 定义一个倒计时的变量
+    var countdown = 6;
+    
+    // 定义一个定时器的变量
+    var timer;
+    
+    // 定义一个函数，用来更新按钮上的文本
+    function updateText() {
+      // 如果倒计时结束，就跳转到指定的网址
+      if (countdown == 0) {
+        window.location.href = "https://rcpic.github.io/phone.html?page=1";
+        return;
+      }
+      
+      // 否则，就把倒计时的数字显示在按钮上
+      btn.innerHTML = countdown + "秒后进入";
+      
+      // 把倒计时减一
+      countdown--;
+    }
+    
+    // 定义一个函数，用来开始倒计时
+    function startCountdown() {
+      // 如果定时器已经存在，就清除它
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+      
+      // 把倒计时重置为5
+      countdown = 6;
+      
+      // 更新一次按钮上的文本
+      updateText();
+      
+      // 设置一个每隔一秒执行一次的定时器，并把它赋值给 timer 变量
+      timer = setInterval(updateText, 1000);
+    }
+    
+    // 给按钮添加点击事件监听器，当点击按钮时，调用 startCountdown 函数
+    btn.addEventListener("click", startCountdown);
+    
+    // 页面加载完成后，也调用一次 startCountdown 函数
+    startCountdown();
+  </script>
+
+<script>
+  var text = "©2023 by RCpic. All rights reserved. / 仅供学习交流使用"; // 设置文本内容
+  var index = 0; // 设置文本索引
+  var speed = 60; // 设置打字速度，单位为毫秒
+  function type() {
+    if (index < text.length) { // 如果索引小于文本长度
+      document.getElementById("text").innerHTML += text.charAt(index); // 在文本元素中追加当前字符
+      index++; // 索引加一
+      setTimeout(type, speed); // 延迟一定时间后继续打字
+    }
+  }
+  type(); // 调用打字函数
+</script>
+</body>
+</html>
