@@ -16,8 +16,8 @@ https://templatemo.com/tm-556-catalog-z
 -->
 </head>
 <body>
-    <script src="js/setting.js"></script>
-    <script src="js/home1.js"></script><!--这是要改的地方-->
+    <script src="set up/SetUP.js"></script>
+    <script src="set up/home1.js"></script><!--这是要改的地方-->
     <script language="javascript" type="text/javascript">
      var NowPage = 1;
      var StartPage = 0;
@@ -69,8 +69,8 @@ https://templatemo.com/tm-556-catalog-z
 
 
     <div class="tm-hero d-flex justify-content-center align-items-center" 
-                    data-parallax="scroll" data-image-src="http://m.qpic.cn/psc?/V51WqWjH2LPtfl1IWB4S3F7wJ205N2fY/ruAMsa53pVQWN7FLK88i5lIlCqXkbFcII25ndb9r*aiWPr7.7.8ojJ5QBcOglXfhaOXk*KWRBwxYwVANfkIRlP7XZWbjvl9XweKaLI1M4kk!/b&bo=DgxABhEP0AcDmTE!&rf=viewer_4&t=5">
-                    <img src="http://m.qpic.cn/psc?/V51WqWjH2LPtfl1IWB4S3F7wJ205N2fY/ruAMsa53pVQWN7FLK88i5lIlCqXkbFcII25ndb9r*aiFwO96uRxXNRhJEPTMK4.zn*sXLX..idYZDKIX6fB3frB6vIxO1sJq3s2G6pBEt.w!/b&bo=AAQAAwAEAAMDGTw!&rf=viewer_4&t=5" width="300" height="250" />
+                    data-parallax="scroll" data-image-src="https://www.helloimg.com/images/2023/04/05/oX40kQ.png">
+                    <img src="https://www.helloimg.com/images/2023/04/05/oX4wOC.png" width="300" height="250" />
     </div><!--背景在这，上面的是背景，下面的是LOGO-->
 
     <div class="container-fluid tm-container-content tm-mt-60">
@@ -437,6 +437,7 @@ if (NowPage != AllOfPage){document.write("<!--")}
                     <a id="GuideB" ></a>
                     <a id="GuideC" ></a>
                     <a id="GuideD" ></a>
+                    <a id="GuideE" ></a>
                 </div>
                 <a id="GuideNEXT"></a>
             </div>
@@ -454,22 +455,25 @@ document.getElementById("GuideNEXT").className="btn btn-primary tm-btn-next";
 document.getElementById("GuideNEXT").innerHTML="Next";
 
  
-
-document.getElementById("GuideA").href="RC"+(((NowPage-2)-(NowPage-2)%5)/5-(-1))+".html"+"?txt="+(NowPage-1);
+document.getElementById("GuideA").href="RC"+(((NowPage-3)-(NowPage-3)%5)/5-(-1))+".html"+"?txt="+(NowPage-2);
 document.getElementById("GuideA").className="tm-paging-link";
-document.getElementById("GuideA").innerHTML=(NowPage-1);
+document.getElementById("GuideA").innerHTML=(NowPage-2);
 
-document.getElementById("GuideB").href="RC"+(((NowPage-1)-(NowPage-1)%5)/5-(-1))+".html"+"?txt="+NowPage;
-document.getElementById("GuideB").className="active tm-paging-link";
-document.getElementById("GuideB").innerHTML=NowPage;
+document.getElementById("GuideB").href="RC"+(((NowPage-2)-(NowPage-2)%5)/5-(-1))+".html"+"?txt="+(NowPage-1);
+document.getElementById("GuideB").className="tm-paging-link";
+document.getElementById("GuideB").innerHTML=(NowPage-1);
 
-document.getElementById("GuideC").href="RC"+((NowPage-NowPage%5)/5-(-1))+".html"+"?txt="+(NowPage-(-1));
-document.getElementById("GuideC").className="tm-paging-link";
-document.getElementById("GuideC").innerHTML=(NowPage-(-1));
+document.getElementById("GuideC").href="RC"+(((NowPage-1)-(NowPage-1)%5)/5-(-1))+".html"+"?txt="+NowPage;
+document.getElementById("GuideC").className="active tm-paging-link";
+document.getElementById("GuideC").innerHTML=NowPage;
 
-document.getElementById("GuideD").href="RC"+(((NowPage-(-1))-(NowPage-(-1))%5)/5-(-1))+".html"+"?txt="+(NowPage-(-2));
+document.getElementById("GuideD").href="RC"+((NowPage-NowPage%5)/5-(-1))+".html"+"?txt="+(NowPage-(-1));
 document.getElementById("GuideD").className="tm-paging-link";
-document.getElementById("GuideD").innerHTML=(NowPage-(-2));
+document.getElementById("GuideD").innerHTML=(NowPage-(-1));
+
+document.getElementById("GuideE").href="RC"+(((NowPage-(-1))-(NowPage-(-1))%5)/5-(-1))+".html"+"?txt="+(NowPage-(-2));
+document.getElementById("GuideE").className="tm-paging-link";
+document.getElementById("GuideE").innerHTML=(NowPage-(-2));
 
 if (NowPage == 1){
 document.getElementById("GuideA").href="javascript:void(0);";
@@ -488,27 +492,34 @@ document.getElementById("GuideD").href="RC"+(((NowPage-(-2))-(NowPage-(-2))%5)/5
 document.getElementById("GuideD").className="tm-paging-link";
 document.getElementById("GuideD").innerHTML=(NowPage-(-3));
 
+document.getElementById("GuideE").href="RC"+(((NowPage-(-3))-(NowPage-(-3))%5)/5-(-1))+".html"+"?txt="+(NowPage-(-4));
+document.getElementById("GuideE").className="tm-paging-link";
+document.getElementById("GuideE").innerHTML=(NowPage-(-4));
+}
+
+if (NowPage == 2){
+document.getElementById("GuideA").href="RC"+(((NowPage-2)-(NowPage-2)%5)/5-(-1))+".html"+"?txt="+(NowPage-1);
+document.getElementById("GuideA").className="tm-paging-link";
+document.getElementById("GuideA").innerHTML=(NowPage-1);
+
+document.getElementById("GuideB").href="javascript:void(0);";
+document.getElementById("GuideB").className="active tm-paging-link";
+document.getElementById("GuideB").innerHTML=NowPage;
+
+document.getElementById("GuideC").href="RC"+((NowPage-NowPage%5)/5-(-1))+".html"+"?txt="+(NowPage-(-1));
+document.getElementById("GuideC").className="tm-paging-link";
+document.getElementById("GuideC").innerHTML=(NowPage-(-1));
+
+document.getElementById("GuideD").href="RC"+(((NowPage-(-1))-(NowPage-(-1))%5)/5-(-1))+".html"+"?txt="+(NowPage-(-2));
+document.getElementById("GuideD").className="tm-paging-link";
+document.getElementById("GuideD").innerHTML=(NowPage-(-2));
+
+document.getElementById("GuideE").href="RC"+(((NowPage-(-2))-(NowPage-(-2))%5)/5-(-1))+".html"+"?txt="+(NowPage-(-3));
+document.getElementById("GuideE").className="tm-paging-link";
+document.getElementById("GuideE").innerHTML=(NowPage-(-3));
 }
 
 if (NowPage == AllOfPage-1){
-document.getElementById("GuideA").href="RC"+(((NowPage-3)-(NowPage-3)%5)/5-(-1))+".html"+"?txt="+(NowPage-2);
-document.getElementById("GuideA").className="tm-paging-link";
-document.getElementById("GuideA").innerHTML=(NowPage-2);
-
-document.getElementById("GuideB").href="RC"+(((NowPage-2)-(NowPage-2)%5)/5-(-1))+".html"+"?txt="+(NowPage-1);
-document.getElementById("GuideB").className="tm-paging-link";
-document.getElementById("GuideB").innerHTML=(NowPage-1);
-
-document.getElementById("GuideC").href="javascript:void(0);";
-document.getElementById("GuideC").className="active tm-paging-link";
-document.getElementById("GuideC").innerHTML=NowPage;
-
-document.getElementById("GuideD").href="RC"+((NowPage-NowPage%5)/5-(-1))+".html"+"?txt="+(NowPage-(-1));
-document.getElementById("GuideD").className="tm-paging-link";
-document.getElementById("GuideD").innerHTML=(NowPage-(-1));
-}
-
-if (NowPage == AllOfPage){
 document.getElementById("GuideA").href="RC"+(((NowPage-4)-(NowPage-4)%5)/5-(-1))+".html"+"?txt="+(NowPage-3);
 document.getElementById("GuideA").className="tm-paging-link";
 document.getElementById("GuideA").innerHTML=(NowPage-3);
@@ -524,6 +535,32 @@ document.getElementById("GuideC").innerHTML=(NowPage-1);
 document.getElementById("GuideD").href="javascript:void(0);";
 document.getElementById("GuideD").className="active tm-paging-link";
 document.getElementById("GuideD").innerHTML=NowPage;
+
+document.getElementById("GuideE").href="RC"+((NowPage-NowPage%5)/5-(-1))+".html"+"?txt="+(NowPage-(-1));
+document.getElementById("GuideE").className="tm-paging-link";
+document.getElementById("GuideE").innerHTML=(NowPage-(-1));
+}
+
+if (NowPage == AllOfPage){
+document.getElementById("GuideA").href="RC"+(((NowPage-5)-(NowPage-5)%5)/5-(-1))+".html"+"?txt="+(NowPage-4);
+document.getElementById("GuideA").className="tm-paging-link";
+document.getElementById("GuideA").innerHTML=(NowPage-4);
+
+document.getElementById("GuideB").href="RC"+(((NowPage-4)-(NowPage-4)%5)/5-(-1))+".html"+"?txt="+(NowPage-3);
+document.getElementById("GuideB").className="tm-paging-link";
+document.getElementById("GuideB").innerHTML=(NowPage-3);
+
+document.getElementById("GuideC").href="RC"+(((NowPage-3)-(NowPage-3)%5)/5-(-1))+".html"+"?txt="+(NowPage-2);
+document.getElementById("GuideC").className="tm-paging-link";
+document.getElementById("GuideC").innerHTML=(NowPage-2);
+
+document.getElementById("GuideD").href="RC"+(((NowPage-2)-(NowPage-2)%5)/5-(-1))+".html"+"?txt="+(NowPage-1);
+document.getElementById("GuideD").className="tm-paging-link";
+document.getElementById("GuideD").innerHTML=(NowPage-1);
+
+document.getElementById("GuideE").href="javascript:void(0);";
+document.getElementById("GuideE").className="active tm-paging-link";
+document.getElementById("GuideE").innerHTML=NowPage;
 }
 
 
